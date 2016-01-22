@@ -1,0 +1,105 @@
+body{
+background:#EDEADB;
+font-family: 'Indie Flower', cursive;
+}
+table{
+border-collapse: collapse;
+}
+td{
+border: 1px solid #000000;
+text-align:center;
+}
+a{
+color:#334311;
+text-decoration:none;
+}
+a:hover{
+text-decoration:underline;
+}
+
+.calDate{
+background-color: #ffffff;
+width:125px;
+height:75px;
+padding:0px;
+vertical-align: top;
+}
+
+.calDate input{
+width:75px;
+}
+.calDate select{
+width:75px;
+}
+
+.dateNumber {
+padding: 0px 10px;
+top:0;
+text-align: left;
+}
+.positioner{
+Position:relative; 
+min-height: 75px;
+}
+.prev{
+background-color: #D7E083;
+}
+#bottomNav{
+color:#334311;
+}
+#bottomNav a{
+color:#334311;
+text-decoration:none;
+}
+#bottomNav a:hover{
+text-decoration:underline;
+}
+#calNav{
+text-align:center;
+}
+
+#calNav a{
+text-align:center;
+color:#334311;
+text-decoration: none;
+}
+
+#calNav a:hover{
+text-decoration:underline;
+}
+
+#calNav #nextButton{
+float:none;
+color:334311;
+}
+
+#calNav #prevButton{
+float:none;
+color:#334311;
+}
+
+#content{
+text-align:center;
+padding:20px;
+}
+#nextButton{
+float:right;
+color:white;
+text-decoration:none;
+}
+#prevButton{
+float:left;
+color:white;
+text-decoration:none;
+}
+
+#prevButton:hover, #nextButton:hover {
+text-decoration:underline;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+#wrapper{
+width:800px;
+margin:0px auto;
+}
