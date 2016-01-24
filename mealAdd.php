@@ -1,8 +1,9 @@
 <? 
+include 'config.php';
 //echo $_REQUEST['year']."-".$_REQUEST['month']."-".$_REQUEST['day1'] 
 if (!isset($_REQUEST["month"])) $_REQUEST["month"] = date("n");
 // Make a MySQL Connection
-	$con = mysqli_connect("localhost", "_USERNAME_", "_PASSWORD_", "clodewer_meals");
+	$con = mysqli_connect("localhost", $username, $password, "clodewer_meals");
 	if (mysqli_connect_errno())
 	  {
 	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
