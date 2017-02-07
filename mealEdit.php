@@ -1,8 +1,6 @@
 <?
-include 'config.php';
-
 // Make a MySQL Connection
-mysql_connect("localhost", $username, $password) or die(mysql_error());
+mysql_connect("localhost", "clodewer_clode", "kijker42") or die(mysql_error());
 mysql_select_db("clodewer_meals") or die(mysql_error());
 
 $mealsArr = array();

@@ -1,6 +1,4 @@
 <?php
-include 'config.php';
-
 date_default_timezone_set ( 'America/Los_Angeles' );
 if (!isset($_REQUEST["month"])) $_REQUEST["month"] = date("n");
 if (!isset($_REQUEST["year"])) $_REQUEST["year"] = date("Y");
@@ -24,7 +22,7 @@ $prevWeek = strtotime(date('Y-m-d',$realStart).'- 1 week');
 
 
 // Make a MySQL Connection
-mysql_connect("localhost", $username, $password) or die(mysql_error());
+mysql_connect("localhost", "clodewer_clode", "kijker42") or die(mysql_error());
 mysql_select_db("clodewer_meals") or die(mysql_error());
 $mealDates = mysql_query("SELECT * FROM calendar where meal_date between '".date('Y-m-d',$realStart)."' and '".date('Y-m-d',$realEnd)."'order by meal_date;") or die(mysql_error());
 while($row = mysql_fetch_array($mealDates)){
