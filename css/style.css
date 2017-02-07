@@ -54,6 +54,14 @@ min-height: 75px;
 .prev{
 background-color: #D7E083;
 }
+.footer{
+	background:#ccc;
+	position:fixed;
+	bottom:0px;
+	padding:10px 0px;
+	width:100%;
+	text-align:center;
+}
 #bottomNav{
 color:#334311;
 }
