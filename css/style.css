@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
 body{
 background:#EDEADB;
 font-family: 'Indie Flower', cursive;
@@ -21,6 +24,7 @@ text-decoration:underline;
 }
 h1{
 text-align:center;
+font-family:'Oswald', sans-serif;
 }
 table select{
 	display:block;
@@ -123,12 +127,15 @@ padding:10px;
 text-decoration:underline;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
 #weekView{
 	text-align: center;
 }
+.weekDate{
+	font-family:'Oswald', sans-serif;
+	font-weight:bold;
+}
 
 #wrapper{
-width:800px;
-margin:0px auto;
+margin:0px auto 50px auto
 }

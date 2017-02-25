@@ -7,7 +7,7 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>FoodCal - A Calendar of Deliciousness</title>
 		<!-- Bootstrap -->
-	<!-- Latest compiled and minified CSS -->
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
@@ -15,13 +15,12 @@
 	</head>
 	<body>
 		<div id="wrapper" class="container">
-		
-  <div id="navBar" class="container-fluid">
-			<a id="editPop" >Edit Meals</a>
-			<a id="editMode">Edit Schedule</a>
-			<a id="viewMode">Week View</a>
-		</div>
-
+			
+			<div id="navBar" class="navbar">
+				<a id="editPop" >Edit Meals</a>
+				<a id="editMode">Edit Schedule</a>
+				<a id="viewMode">Week View</a>
+			</div>
 			<table id="calendar" class="table-bordered">
 				<tr>
 					<td colspan="7">
@@ -44,51 +43,49 @@
 			<div id="weekView" class="column">
 				<div id="weekNav">
 					<a id="prevWeek" class="prevLink">Previous Week</a>
-						<a id="nextWeek" class="nextLink">Next Week</a>
-						<h1 id="weekName"></h1>
+					<a id="nextWeek" class="nextLink">Next Week</a>
+					<h1 id="weekName"></h1>
 				</div>
 			</div>
 		</div>
-
 		<!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Update Meal</h4>
-		      </div>
-		      <div class="modal-body">
-		      		<div id="addOrEdit">
-				       <select id="meals">
-				       	<option value="">-Select a Meal-</option>
-				       </select> 
-				       OR
-				       <button id="newButton" type="button" class="btn btn-default">New</button>
-				    </div>
-			       <div id="mealEditor">
-
-			       <input id="newMeal" type="hidden" value=""/>
-			       <input id="mealName" type="text" class="form-control"/>
-			     <div class="checkbox" id="deleteContainer">
-			     <label for="delete" >  
-			     	<input id="Delete" name="delete" type="checkbox"/>Remove Meal
-			     </label>
-			     </div>
-			       </div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button id="mealUpdate" type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Update Meal</h4>
+					</div>
+					<div class="modal-body">
+						<div id="addOrEdit">
+							<select id="meals">
+								<option value="">-Select a Meal-</option>
+							</select>
+							OR
+							<button id="newButton" type="button" class="btn btn-default">New</button>
+						</div>
+						<div id="mealEditor">
+							<input id="newMeal" type="hidden" value=""/>
+							<input id="mealName" type="text" class="form-control"/>
+							<div class="checkbox" id="deleteContainer">
+								<label for="delete" >
+									<input id="Delete" name="delete" type="checkbox"/>Remove Meal
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button id="mealUpdate" type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="footer">
 			© Kyle Linneman 2012 ~ <a href="https://github.com/clodewerks/foodcal/issues" target="_blank">Submit an Issue</a>
 		</div>
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="./js/foodcal.js"></script>
 	</body>
