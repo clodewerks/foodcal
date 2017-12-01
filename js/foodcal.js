@@ -9,12 +9,12 @@ var foodCal = {
 	mealList:"",
 	monthNav:function(dir){
 		var newMonth = this.month + dir;
-		if(newMonth == -1){
-		 newMonth = 11;
+		if(newMonth == 0){
+		 newMonth = 12;
 		 this.year--;
 		}
-		if(newMonth == 12) {
-			newMonth = 0;
+		if(newMonth == 13) {
+			newMonth = 1;
 			this.year++;
 		}
 		var url = window.location.pathname + "?view=m&" +"month=" + newMonth + "&year=" + this.year;
@@ -142,6 +142,7 @@ var foodCal = {
 
 	},
 	init:function(){
+		this.createMealList();
 		if(this.parseURL("month").length == 0){
 			this.month = this.today.getMonth()+1;
 		}
@@ -160,7 +161,7 @@ var foodCal = {
 		else{
 			this.day = parseInt(this.parseURL("day"));
 		}
-		this.createMealList();
+		
 		if(this.parseURL("view")==="w"){
 			this.weekInit();
 			$("#calendar").css("display","none");
