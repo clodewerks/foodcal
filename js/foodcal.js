@@ -72,13 +72,17 @@ var foodCal = {
 	},
 	createMealList:function(){
 		foodCal.mealList = "";
-		$.get( "./jsonservices/getMeals.php", function( data ) {
-			 eval(data);
-			meals.sort(function(a,b) {return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);} );
-			 for(var i = 0; i<meals.length; i++){
-			 	foodCal.mealList += "<option value='"+meals[i].id+"''>"+meals[i].name+"</option>";
-			 }
-			 $("#meals").html("<option value=''>-Select a Meal-</option>"+foodCal.mealList);
+		$.ajax( {
+			url: "./jsonservices/getMeals.php", 
+			success: function( data ) {
+			 	eval(data);
+				meals.sort(function(a,b) {return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);} );
+			 	for(var i = 0; i<meals.length; i++){
+			 		foodCal.mealList += "<option value='"+meals[i].id+"''>"+meals[i].name+"</option>";
+				 }
+			 	$("#meals").html("<option value=''>-Select a Meal-</option>"+foodCal.mealList);
+			},
+			async: false
 		});	
 	},
 	editMeal:function(){
