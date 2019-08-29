@@ -9,7 +9,7 @@ while ($monthViewStart <= $monthViewEND) {
     else $query = $query.'';
     $monthViewStart = strtotime(date('Y-m-d',$monthViewStart).'+ 1 day');
 }
-$mealDates = mysql_query($query) or die(mysql_error());
+$mealDates = mysqli_query($con,$query) or die(mysqli_error());
 
 echo 'Dates Added!';
 

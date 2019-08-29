@@ -8,7 +8,7 @@ if (!isset($_REQUEST["fullDate"])) echo 'Error: Please specify Date';
 
 $query = 'update calendar set Meal_id ='.$_REQUEST["mealID"].' where meal_date =\''.$_REQUEST["fullDate"].'\';';
 
-$mealDates = mysql_query($query) or die(mysql_error());
+$mealDates = mysqli_query($con,$query) or die(mysqli_error());
 
 
 echo 'Date Updated!';

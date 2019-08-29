@@ -1,8 +1,8 @@
 <?php
 include 'config.php';
 
-mysql_connect("localhost", $username, $password) or die(mysql_error());
-mysql_select_db("clodewer_meals") or die(mysql_error());
+$con = mysqli_connect("localhost", $username, $password) or die(mysqli_error());
+mysqli_select_db($con,"clodewer_meals") or die(mysqli_error());
 
 
 ?>

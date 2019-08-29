@@ -7,15 +7,15 @@ else {
 
 $setStatement = '';
 
-if (isset($_REQUEST["mealName"]) && !isset($_REQUEST["mealActive"])) $setStatement = "Meal_Name = '".mysql_real_escape_string($_REQUEST["mealName"])."'";
+if (isset($_REQUEST["mealName"]) && !isset($_REQUEST["mealActive"])) $setStatement = "Meal_Name = '".mysql_real_escape_string($con,$_REQUEST["mealName"])."'";
 
 if (!isset($_REQUEST["mealName"]) && isset($_REQUEST["mealActive"])) $setStatement = "Meal_Active = '".$_REQUEST["mealActive"]."'";
 
-if (isset($_REQUEST["mealName"]) && isset($_REQUEST["mealActive"])) $setStatement = "Meal_Name = '".mysql_real_escape_string($_REQUEST["mealName"])."', Meal_Active = '".$_REQUEST["mealActive"]."'";
+if (isset($_REQUEST["mealName"]) && isset($_REQUEST["mealActive"])) $setStatement = "Meal_Name = '".mysql_real_escape_string($con,$_REQUEST["mealName"])."', Meal_Active = '".$_REQUEST["mealActive"]."'";
 
 
 
-	$mealDates = mysql_query("update meals set ".$setStatement."where Meal_id =".$_REQUEST["mealID"]) or die(mysql_error());
+	$mealDates = mysqli_query($con,"update meals set ".$setStatement."where Meal_id =".$_REQUEST["mealID"]) or die(mysqli_error());
 
 	echo 'Meal Updated!';
 

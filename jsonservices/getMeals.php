@@ -3,9 +3,9 @@ include '../php/sql.php';
 
 if (!isset($_REQUEST["active"])) $_REQUEST["active"] = '1';
 
-$mealDates = mysql_query("select * from meals where Meal_Active = ".$_REQUEST["active"]) or die(mysql_error());
+$mealDates = mysqli_query($con,"select * from meals where Meal_Active = ".$_REQUEST["active"]) or die(mysqli_error());
 
-while($row = mysql_fetch_array($mealDates)){
+while($row = mysqli_fetch_array($mealDates)){
 	$mealId[] = '{id:"'.$row['Meal_id'].'", name:"'.$row['Meal_Name'].'"}';
 }
 
