@@ -42,4 +42,7 @@ if ($next_month == 13 ) {
     $next_year = $_REQUEST["year"] + 1;
 }
 
+function getWeekday($d){
+    return date('w', $d);
+}
 ?>
